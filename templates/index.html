@@ -49,18 +49,6 @@
       display: none; 
     }
 
-    .right-image-3 {
-      position: fixed;
-      top: 12%;
-      right: 91.25%;
-      width: 8%;
-      height: 70%;
-      background: url('/static/images/deltafaucet.png') no-repeat center center;
-      background-size: contain;
-      transform: translateY(-55%);
-      display: none; 
-    }
-
     .upload-container {
       max-width: 600px;
       margin: 120px auto;
@@ -103,7 +91,6 @@
 
   <div class="container">
     <div class="upload-container">
-      <h1 class="text-center mb-4">Failure Model Analysis</h1>
       <form action="/upload" method="post" enctype="multipart/form-data">
         <div class="mb-3">
           <label for="file" class="form-label">Upload CSV File</label>
@@ -126,7 +113,7 @@
       isDebouncing = true;
 
       const images = document.querySelectorAll(
-        '.left-image, .right-image-1, .right-image-2, .right-image-3'
+        '.left-image, .right-image-1, .right-image-2'
       );
       images.forEach((image) => {
         if (getComputedStyle(image).display === 'none') {
